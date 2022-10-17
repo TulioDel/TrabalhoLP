@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Polyline?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1204.0" style="-fx-background-color: rgba(30, 30, 30, 1); -fx-border-radius: 60px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.Controlador">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgba(30, 30, 30, 1); -fx-border-radius: 60px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.Controlador">
 
 <top>
     <HBox fx:id="barra" alignment="CENTER_RIGHT" onMouseDragged="#borderpane_dragged" onMousePressed="#borderpane_pressed" prefHeight="15.0" prefWidth="1204.0" style="-fx-background-color: rgba(46, 45, 51, 1); -fx-spacing: 20px; -fx-padding: 5 25 5 5;" BorderPane.alignment="CENTER">
@@ -25,7 +25,7 @@
     </HBox>
 </top>
 <center>
-    <VBox alignment="CENTER_LEFT" prefHeight="669.0" prefWidth="692.0" BorderPane.alignment="CENTER_LEFT">
+    <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
         <children>
             <TextField promptText="Email" style="-fx-max-width: 200; -fx-background-color: 0;">
                 <font>
@@ -37,7 +37,7 @@
                     <Insets bottom="30.0" top="5.0" />
                 </VBox.margin>
             </Line>
-            <PasswordField layoutX="512.0" layoutY="332.0" maxWidth="834.0" prefHeight="37.0" prefWidth="834.0" promptText="Senha" style="-fx-max-width: 200; -fx-background-color: 0;">
+            <PasswordField layoutX="512.0" layoutY="332.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Senha" style="-fx-max-width: 200; -fx-background-color: 0;">
                 <font>
                     <Font name="Calibri" size="20.0" />
                 </font>
@@ -47,7 +47,7 @@
                     <Insets top="5.0" />
                 </VBox.margin>
             </Line>
-            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="0.0" prefWidth="403.0" style="-fx-background-color: rgba(64, 68, 237, 1);" text="Logar" textFill="WHITE">
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefWidth="403.0" style="-fx-background-color: rgba(64, 68, 237, 1);" text="Logar" textFill="WHITE">
                 <VBox.margin>
                     <Insets top="50.0" />
                 </VBox.margin>
@@ -59,22 +59,22 @@
     </VBox>
 </center>
 <left>
-    <AnchorPane prefHeight="669.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+    <AnchorPane BorderPane.alignment="CENTER">
         <children>
-            <Circle fill="#4044ed" layoutX="-49.0" layoutY="335.0" radius="277.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="#93dfff" layoutX="158.0" layoutY="151.0" radius="26.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#4044ed" layoutX="-49.0" layoutY="335.0" radius="277.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="-326.0" AnchorPane.rightAnchor="172.0" AnchorPane.topAnchor="58.0" />
+            <Circle fill="#93dfff" layoutX="144.0" layoutY="134.0" radius="26.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="515.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="108.0" />
         </children>
     </AnchorPane>
 </left>
 <right>
-    <AnchorPane prefHeight="672.0" prefWidth="401.0" BorderPane.alignment="CENTER">
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
         <children>
-            <Polyline fill="#4247eb7f" layoutX="226.0" layoutY="586.0" points="-50.0, -40.0, 119.0255126953125, -116.4147720336914, 101.78871154785156, 48.487911224365234, -50.0, -40.0" rotate="45.0" strokeType="INSIDE" strokeWidth="0.0" translateX="100.0" translateY="100.0" />
-            <Polyline fill="#4247eb7f" layoutX="266.0" layoutY="570.0" points="-50.0, -40.0, 119.0255126953125, -116.4147720336914, 101.78871154785156, 48.487911224365234, -50.0, -40.0" rotate="45.0" strokeType="INSIDE" strokeWidth="0.0" translateY="50.0" />
-            <Polyline fill="#4247eb7f" layoutX="208.0" layoutY="555.0" points="-50.0, -40.0, 119.0255126953125, -116.4147720336914, 99.73822021484375, 50.255950927734375, -50.0, -40.0" rotate="45.0" strokeType="INSIDE" strokeWidth="0.0" />
-            <Polyline fill="#4247eb7f" layoutX="226.0" layoutY="240.0" points="-50.0, -40.0, 119.0255126953125, -116.4147720336914, 108.0, 45.09027099609375, -50.0, -40.0" strokeType="INSIDE" strokeWidth="0.0" />
-            <Polyline fill="#4247eb7f" layoutX="299.0" layoutY="130.0" points="-50.0, -40.0, 119.0255126953125, -116.4147720336914, 101.78871154785156, 48.487911224365234, -50.0, -40.0" strokeType="INSIDE" strokeWidth="0.0" />
-            <Polyline fill="#4247eb7f" layoutX="264.0" layoutY="179.0" points="-50.0, -40.0, 119.0255126953125, -116.4147720336914, 99.73822021484375, 50.255950927734375, -50.0, -40.0" strokeType="INSIDE" strokeWidth="0.0" />
+            <Polyline fill="#4247eb7f" layoutX="226.0" layoutY="586.0" points="-50.0, -40.0, 119.0255126953125, -116.4147720336914, 101.78871154785156, 48.487911224365234, -50.0, -40.0" rotate="45.0" strokeType="INSIDE" strokeWidth="0.0" translateX="100.0" translateY="100.0" AnchorPane.bottomAnchor="0.5120925903320312" AnchorPane.leftAnchor="176.0" AnchorPane.rightAnchor="58.9744873046875" AnchorPane.topAnchor="469.48790740966797" />
+            <Polyline fill="#4247eb7f" layoutX="266.0" layoutY="570.0" points="-50.0, -40.0, 119.0255126953125, -116.4147720336914, 101.78871154785156, 48.487911224365234, -50.0, -40.0" rotate="45.0" strokeType="INSIDE" strokeWidth="0.0" translateY="50.0" AnchorPane.rightAnchor="18.9744873046875" AnchorPane.topAnchor="453.5852279663086" />
+            <Polyline fill="#4247eb7f" layoutX="208.0" layoutY="555.0" points="-50.0, -40.0, 119.0255126953125, -116.4147720336914, 99.73822021484375, 50.255950927734375, -50.0, -40.0" rotate="45.0" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="29.744056701660156" AnchorPane.leftAnchor="157.0255126953125" AnchorPane.rightAnchor="76.9744873046875" AnchorPane.topAnchor="438.5852279663086" />
+            <Polyline fill="#4247eb7f" layoutX="187.0" layoutY="288.0" points="-50.0, -40.0, 119.0255126953125, -116.4147720336914, 97.0, 51.18756103515625, -50.0, -40.0" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="301.9097366333008" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="97.9744873046875" AnchorPane.topAnchor="171.5852279663086" />
+            <Polyline fill="#4247eb7f" layoutX="299.0" layoutY="130.0" points="-50.0, -40.0, 119.0255126953125, -116.4147720336914, 101.78871154785156, 48.487911224365234, -50.0, -40.0" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="456.51209259033203" AnchorPane.leftAnchor="248.0255126953125" AnchorPane.rightAnchor="-14.0255126953125" AnchorPane.topAnchor="13.585227966308594" />
+            <Polyline fill="#4247eb7f" layoutX="241.0" layoutY="211.0" points="-50.0, -40.0, 119.0255126953125, -116.4147720336914, 99.73822021484375, 50.255950927734375, -50.0, -40.0" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="373.74405670166016" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="43.9744873046875" AnchorPane.topAnchor="94.5852279663086" />
         </children>
     </AnchorPane>
 </right>
