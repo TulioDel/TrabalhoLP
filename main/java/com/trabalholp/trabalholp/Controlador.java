@@ -43,7 +43,6 @@ public class Controlador extends Aplicativo {
         Stage stage = (Stage) MaxBotao.getScene().getWindow();
         if (stage.isMaximized() == true) {
             stage.setMaximized(false);
-            stage.setMaximized(false);
         }
 
         else {
