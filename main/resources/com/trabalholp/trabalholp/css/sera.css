@@ -1,0 +1,36 @@
+#tabela {
+    -fx-background-color: rgba(44, 44, 44, 1);
+
+}
+
+#tabela .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: rgba(56, 56, 56, 1);
+
+
+
+
+}
+
+#tabela .column-header .label{
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+
+
+}
+
+#coluna {
+    -fx-background-color: rgba(44, 44, 44, 1);
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+
+
+
+}
+
+#coluna{
+    -fx-border-color: rgba(53, 53, 53, 1);
+    -fx-border: 1px;
+    -fx-padding: 10px;
+}

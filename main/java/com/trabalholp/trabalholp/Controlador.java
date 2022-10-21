@@ -1,6 +1,7 @@
 package com.trabalholp.trabalholp;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
@@ -13,10 +14,11 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
-
-public class Controlador extends Aplicativo {
+public class Controlador {
     @FXML
     private Circle MinBotao;
 
@@ -65,8 +67,6 @@ public class Controlador extends Aplicativo {
         x = event.getSceneX();
         y = event.getSceneY();
     }
-
-
 }
 
 

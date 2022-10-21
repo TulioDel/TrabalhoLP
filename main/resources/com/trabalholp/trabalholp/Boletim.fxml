@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgba(30, 30, 30, 1); -fx-border-radius: 60px;" stylesheets="@css/sera.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.ControladorBoletim">
+
+<top>
+    <HBox fx:id="barra" alignment="CENTER_RIGHT" onMouseDragged="#borderpane_dragged" onMousePressed="#borderpane_pressed" prefHeight="15.0" prefWidth="1204.0" style="-fx-background-color: rgba(46, 45, 51, 1); -fx-spacing: 20px; -fx-padding: 5 25 5 5;" BorderPane.alignment="CENTER">
+        <children>
+            <Circle fx:id="MaxBotao" fill="#0fa81e" onMouseClicked="#onMax" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="MinBotao" fill="#ffd706" layoutX="1145.0" layoutY="23.0" onMouseClicked="#onMin" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#c90909" layoutX="1180.0" layoutY="24.0" onMouseClicked="#onFechar" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        </children>
+    </HBox>
+</top>
+   <left>
+      <VBox alignment="CENTER" prefHeight="635.0" prefWidth="53.0" style="-fx-background-color: rgba(46, 46, 72, 1); -fx-background-radius: 0 20 0 0; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 10, 2); -fx-spacing: 50;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@icons/menu.png" />
+               </image>
+            </ImageView>
+         </children></VBox>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <TableView id="tabela" fx:id="tabelaNotas" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn id="coluna" fx:id="materias" prefWidth="75.0" sortable="false" text="Matéria" />
+                <TableColumn id="coluna" fx:id="primeiro" prefWidth="75.0" sortable="false" text="1º Bimestre" />
+                  <TableColumn id="coluna" fx:id="segundo" prefWidth="75.0" sortable="false" text="2º  Bimestre" />
+                  <TableColumn id="coluna" fx:id="terceiro" prefWidth="75.0" sortable="false" text="3º  Bimestre" />
+                  <TableColumn id="coluna" fx:id="quarto" prefWidth="75.0" sortable="false" text="4º  Bimestre" />
+                  <TableColumn id="coluna" fx:id="estado" prefWidth="75.0" sortable="false" text="Estado" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <BorderPane.margin>
+                  <Insets left="60.0" right="60.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <top>
+            <HBox prefHeight="44.0" prefWidth="1151.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="60.0" right="60.0" top="100.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>
