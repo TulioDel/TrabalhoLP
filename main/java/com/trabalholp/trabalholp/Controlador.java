@@ -43,7 +43,7 @@ public class Controlador {
     @FXML
     private void onMax() {
         Stage stage = (Stage) MaxBotao.getScene().getWindow();
-        if (stage.isMaximized() == true) {
+        if (stage.isMaximized()) {
             stage.setMaximized(false);
         }
 

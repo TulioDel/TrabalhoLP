@@ -8,9 +8,6 @@
 .table-view .column-header-background .filler {
     -fx-background-color: rgba(56, 56, 56, 1);
 
-
-
-
 }
 
 #tabela .column-header .label{
@@ -24,13 +21,64 @@
     -fx-background-color: rgba(44, 44, 44, 1);
     -fx-text-fill: white;
     -fx-alignment: CENTER;
-
-
-
-}
-
-#coluna{
-    -fx-border-color: rgba(53, 53, 53, 1);
+    -fx-border-color: rgba(75, 75, 75, 1);
     -fx-border: 1px;
     -fx-padding: 10px;
+}
+
+
+
+
+
+#tabelaNum .column-header .label{
+    -fx-padding: 10px;
+}
+
+#colunaNum {
+     -fx-background-color: rgba(56, 56, 56, 1);
+     -fx-text-fill: white;
+     -fx-alignment: CENTER;
+     -fx-border-color: rgba(75, 75, 75, 1);
+     -fx-border: 1px;
+     -fx-padding: 10px;
+}
+
+
+
+.table-row-cell:empty {
+    -fx-background-color: white;
+}
+
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+
+.list-cell:empty {
+    -fx-background-color: white;
+}
+
+.toggle .thumb-area {
+    -fx-background-color: rgba(39, 39, 41, 1);
+}
+
+.toggle:selected .thumb-area {
+    -fx-background-color: rgba(59, 58, 122, 1);
+}
+
+
+.toggle .thumb {
+    -fx-background-color: rgba(255, 255, 255, 1);
+}
+
+.toggle:selected .thumb {
+    -fx-background-color: rgba(88, 86, 214, 1);
+}
+
+#colunaP {
+    -fx-background-color: rgba(56, 56, 56, 1);
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+    -fx-border-color: rgba(75, 75, 75, 1);
+    -fx-border: 1px;
+    fx-padding: 10px;
 }

@@ -1,16 +1,21 @@
 package com.trabalholp.trabalholp;
 
+import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import javafx.util.converter.IntegerStringConverter;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -39,6 +44,11 @@ public class ControladorBoletim implements Initializable {
 
     @FXML
     private TableColumn<linha, Double> estado;
+    @FXML
+    private TableColumn<linha, String> estado2;
+
+    @FXML
+    private TableColumn<linha, Integer> um;
 
 
 
@@ -78,13 +88,7 @@ public class ControladorBoletim implements Initializable {
     @FXML
     private void onMax() {
         Stage stage = (Stage) MaxBotao.getScene().getWindow();
-        if (stage.isMaximized() == true) {
-            stage.setMaximized(false);
-        }
-
-        else {
-            stage.setMaximized(true);
-        }
+        stage.setMaximized(!stage.isMaximized());
     }
 
 
@@ -106,37 +110,149 @@ public class ControladorBoletim implements Initializable {
         y = event.getSceneY();
     }
 
+    int media = 60;
+    @FXML
+    private void toggleMedia() {
+        if (media == 70) {
+            media = 60;
+        }
+
+        else {
+            media = 70;
+        }
+
+        for (int i = 0; i < 14;i++) {
+            linhas.get(i).atualizarEstado(media);
+            tabelaNotas.refresh();
+        }
+    }
+
+    @FXML
+    private void toggleEstado() {
+        if (estado.isVisible()) {
+            estado.setVisible(false);
+            estado2.setVisible(true);
+        }
+        else {
+            estado2.setVisible(false);
+            estado.setVisible(true);
+        }
+    }
+
+    @FXML
+    private void toggleDivisao(){
+        if (primeiro.getText().intern() == "1º Bimestre") {
+
+            primeiro.setText("1º Trimestre");
+            segundo.setText("2º Trimestre");
+            terceiro.setText("3º Trimestre");
+            quarto.setVisible(false);
+
+            for (int i = 0; i < 14;i++) {
+                linhas.get(i).setNota4(0);
+                linhas.get(i).atualizarEstado(media);
+                tabelaNotas.refresh();
+            }
+
+        }
+
+        else {
+            primeiro.setText("1º Bimestre");
+            segundo.setText("2º Bimestre");
+            terceiro.setText("3º Bimestre");
+            quarto.setText("4º Bimestre");
+
+            quarto.setVisible(true);
+        }
+
+    }
+
+
+
+    ObservableList<linha> linhas = FXCollections.observableArrayList();
+
+
+    public void encherN() {
+        for (int i = 0; i < 15;i++) {
+            linhas.add(new linha(1, 2, 3,4,"materia" + Integer.toString(i+1),i+2, media));
+        }
+
+    }
+
+    public void Lista() {
+
+        tabelaNotas.setEditable(true);
+
+        encherN();
+
+        um.setCellValueFactory(new PropertyValueFactory<linha, Integer>("numero"));
+
+
+
+        materias.setCellValueFactory(new PropertyValueFactory<linha, String>("materia"));
+        materias.setCellFactory(TextFieldTableCell.forTableColumn());
+        materias.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<linha, String>>() {
+            @Override
+            public void handle(TableColumn.CellEditEvent<linha, String> linhaStringCellEditEvent) {
+                linha linhaEd = linhaStringCellEditEvent.getRowValue();
+                linhaEd.setMateria(linhaStringCellEditEvent.getNewValue());
+            }
+        });
+
+
+        primeiro.setCellValueFactory(new PropertyValueFactory<linha, Double>("nota1"));
+        segundo.setCellValueFactory(new PropertyValueFactory<linha, Double>("nota2"));
+        terceiro.setCellValueFactory(new PropertyValueFactory<linha, Double>("nota3"));
+        quarto.setCellValueFactory(new PropertyValueFactory<linha, Double>("nota4"));
+
+        estado.setCellValueFactory(new PropertyValueFactory<linha, Double>("estado"));
+        estado2.setCellValueFactory(new PropertyValueFactory<linha, String>("estado2"));
+
+
+        materias.setReorderable(false);
+        primeiro.setReorderable(false);
+        segundo.setReorderable(false);
+        terceiro.setReorderable(false);
+        quarto.setReorderable(false);
+        estado.setReorderable(false);
+        estado2.setReorderable(false);
+
+
+
+        estado2.setVisible(false);
 
 
 
 
 
-    ObservableList<linha> linhas = FXCollections.observableArrayList(
-            new linha(1, 2, 3,4,5,"OA"),
-            new linha(1, 2, 3,4,5,"OB"),
-            new linha(1, 2, 3,4,5,"OC")
-    );
 
+
+
+        um.setMinWidth(50);
+        um.setMaxWidth(50);
+
+
+        materias.setMinWidth(150);
+        estado.setMinWidth(70);
+        estado2.setMinWidth(70);
+
+
+
+
+        tabelaNotas.setFixedCellSize(48.3);
+
+
+        tabelaNotas.setItems(linhas);
+    }
 
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-
-        materias.setCellValueFactory(new PropertyValueFactory<linha, String>("materia"));
-        primeiro.setCellValueFactory(new PropertyValueFactory<linha, Double>("nota1"));
-        segundo.setCellValueFactory(new PropertyValueFactory<linha, Double>("nota2"));
-        terceiro.setCellValueFactory(new PropertyValueFactory<linha, Double>("nota3"));
-        quarto.setCellValueFactory(new PropertyValueFactory<linha, Double>("nota4"));
-        estado.setCellValueFactory(new PropertyValueFactory<linha, Double>("estado"));
-        tabelaNotas.setFixedCellSize(35);
-        tabelaNotas.setItems(linhas);
-
-        tabelaNotas.setEditable(true);
-
-
+        Lista();
     }
+
+
 
 }
 
