@@ -141,7 +141,7 @@ public class ControladorBoletim implements Initializable {
 
     @FXML
     private void toggleDivisao(){
-        if (primeiro.getText().intern() == "1º Bimestre") {
+        if (primeiro.getText().equals("1º Bimestre")) {
 
             primeiro.setText("1º Trimestre");
             segundo.setText("2º Trimestre");
