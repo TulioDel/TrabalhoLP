@@ -28,33 +28,37 @@
     </HBox>
 </top>
    <left>
-      <VBox alignment="CENTER" prefHeight="635.0" prefWidth="53.0" style="-fx-background-color: rgba(46, 46, 72, 1); -fx-background-radius: 0 20 0 0; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 10, 2); -fx-spacing: 50;" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="635.0" prefWidth="53.0" style="-fx-background-color: rgba(46, 46, 72, 1); -fx-background-radius: 0 20 0 0; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 10, 2); -fx-spacing: 10%;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@icons/user.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="23.0" fitWidth="23.0">
-               <image>
-                  <Image url="@icons/config.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="28.0" fitWidth="20.0">
-               <image>
-                  <Image url="@icons/boletim.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0">
-               <image>
-                  <Image url="@icons/menu.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="28.0" fitWidth="21.0">
-               <image>
-                  <Image url="@icons/notepad.png" />
-               </image>
-            </ImageView>
+            <VBox alignment="CENTER" prefHeight="781.0" prefWidth="53.0" style="-fx-spacing: 40;">
+               <children>
+                  <ImageView fitHeight="23.0" fitWidth="23.0">
+                     <image>
+                        <Image url="@icons/config.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@icons/boletim.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@icons/menu.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="21.0">
+                     <image>
+                        <Image url="@icons/notepad.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
          </children></VBox>
    </left>
    <center>
@@ -82,7 +86,7 @@
          <top>
             <BorderPane BorderPane.alignment="CENTER">
                <center>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="BOLETIM" textAlignment="CENTER" wrappingWidth="212.5849609375" BorderPane.alignment="CENTER">
+                  <Text fill="WHITE" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="2.5" text="BOLETIM" textAlignment="CENTER" wrappingWidth="212.5849609375" BorderPane.alignment="CENTER">
                      <font>
                         <Font name="Lucida Sans Unicode" size="50.0" />
                      </font>

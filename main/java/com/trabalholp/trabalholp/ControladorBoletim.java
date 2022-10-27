@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import javafx.util.converter.DoubleStringConverter;
 import javafx.util.converter.IntegerStringConverter;
 
 
@@ -121,6 +122,10 @@ public class ControladorBoletim implements Initializable {
             media = 70;
         }
 
+        atualiarEstados();
+    }
+
+    private void atualiarEstados() {
         for (int i = 0; i < 14;i++) {
             linhas.get(i).atualizarEstado(media);
             tabelaNotas.refresh();
@@ -201,9 +206,51 @@ public class ControladorBoletim implements Initializable {
 
 
         primeiro.setCellValueFactory(new PropertyValueFactory<linha, Double>("nota1"));
+        primeiro.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
+        primeiro.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<linha, Double>>() {
+            @Override
+            public void handle(TableColumn.CellEditEvent<linha, Double> linhaStringCellEditEvent) {
+                linha linhaEd = linhaStringCellEditEvent.getRowValue();
+                linhaEd.setNota1(linhaStringCellEditEvent.getNewValue());
+                atualiarEstados();
+            }
+        });
+
+
         segundo.setCellValueFactory(new PropertyValueFactory<linha, Double>("nota2"));
+        segundo.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
+        segundo.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<linha, Double>>() {
+            @Override
+            public void handle(TableColumn.CellEditEvent<linha, Double> linhaStringCellEditEvent) {
+                linha linhaEd = linhaStringCellEditEvent.getRowValue();
+                linhaEd.setNota2(linhaStringCellEditEvent.getNewValue());
+                atualiarEstados();
+            }
+        });
+
+
         terceiro.setCellValueFactory(new PropertyValueFactory<linha, Double>("nota3"));
+        terceiro.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
+        terceiro.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<linha, Double>>() {
+            @Override
+            public void handle(TableColumn.CellEditEvent<linha, Double> linhaStringCellEditEvent) {
+                linha linhaEd = linhaStringCellEditEvent.getRowValue();
+                linhaEd.setNota3(linhaStringCellEditEvent.getNewValue());
+                atualiarEstados();
+            }
+        });
+
         quarto.setCellValueFactory(new PropertyValueFactory<linha, Double>("nota4"));
+        quarto.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
+        quarto.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<linha, Double>>() {
+            @Override
+            public void handle(TableColumn.CellEditEvent<linha, Double> linhaStringCellEditEvent) {
+                linha linhaEd = linhaStringCellEditEvent.getRowValue();
+                linhaEd.setNota4(linhaStringCellEditEvent.getNewValue());
+                atualiarEstados();
+            }
+        });
+
 
         estado.setCellValueFactory(new PropertyValueFactory<linha, Double>("estado"));
         estado2.setCellValueFactory(new PropertyValueFactory<linha, String>("estado2"));
