@@ -1,9 +1,12 @@
+
+
 #tabela {
     -fx-background-color: rgba(44, 44, 44, 1);
     -fx-border-width: 4 0 0 0;
-    -fx-border-color: rgba(151, 71, 255, 1);
+    -fx-border-color: rgba(175,12,21,255);
     -fx-border-radius: 5px;
     -fx-background-radius: 10px;
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 10, 10);
 
 
 }
@@ -72,7 +75,7 @@
 }
 
 .toggle:selected .thumb-area {
-    -fx-background-color: rgba(59, 58, 122, 1);
+    -fx-background-color: rgba(173, 64, 70, 1);
 }
 
 
@@ -81,7 +84,7 @@
 }
 
 .toggle:selected .thumb {
-    -fx-background-color: rgba(88, 86, 214, 1);
+    -fx-background-color:  rgba(175,12,21,255);
 }
 
 #colunaP {
@@ -91,6 +94,7 @@
     -fx-border-color: rgba(75, 75, 75, 1);
     -fx-border: 1px;
     fx-padding: 10px;
+    -fx-font-weight: bold
 }
 
 .scroll-bar:horizontal .thumb,
@@ -102,4 +106,14 @@
 
 .scroll-bar:horizontal, .scroll-bar:vertical {
     -fx-background-color: rgba(75, 75, 75, 1);
+}
+
+.image:border {
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-width: 25;
+}
+
+.fundoIcone:hover {
+    -fx-background-color:#dae7f3;
 }

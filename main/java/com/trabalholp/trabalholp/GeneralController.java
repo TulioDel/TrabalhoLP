@@ -1,24 +1,21 @@
 package com.trabalholp.trabalholp;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class Controlador {
+public class GeneralController implements Initializable {
     @FXML
     private Circle MinBotao;
 
@@ -28,6 +25,8 @@ public class Controlador {
     @FXML
     private HBox barra;
 
+    @FXML
+    private BorderPane mainPane;
 
     @FXML
     protected void onFechar() {
@@ -45,9 +44,7 @@ public class Controlador {
         Stage stage = (Stage) MaxBotao.getScene().getWindow();
         if (stage.isMaximized()) {
             stage.setMaximized(false);
-        }
-
-        else {
+        } else {
             stage.setMaximized(true);
         }
     }
@@ -67,8 +64,21 @@ public class Controlador {
         x = event.getSceneX();
         y = event.getSceneY();
     }
-}
 
+    @FXML
+    private void boletim(ActionEvent event) {
+        PageLoader vai = new PageLoader();
+        BorderPane sera = vai.getPane("end");
+        mainPane.setCenter(sera);
+
+    }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+}
 
 
 

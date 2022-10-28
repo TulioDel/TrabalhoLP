@@ -10,6 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.shape.Circle;
@@ -179,7 +180,7 @@ public class ControladorBoletim implements Initializable {
 
     public void encherN() {
         for (int i = 0; i < 15;i++) {
-            linhas.add(new linha(1, 2, 3,4,"materia" + Integer.toString(i+1),i+2, media));
+            linhas.add(new linha(1, 2, 3,4,"materia" + Integer.toString(i+1),i+1, media));
         }
 
     }

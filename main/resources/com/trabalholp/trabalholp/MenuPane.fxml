@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgba(24,24,24,255); -fx-background-radius: 10px; -fx-effect: gaussianblur(1);" stylesheets="@css/sera.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.GeneralController">
+
+   <top>
+      <HBox fx:id="barra" alignment="CENTER_RIGHT" onMouseDragged="#borderpane_dragged" onMousePressed="#borderpane_pressed" prefHeight="15.0" prefWidth="1204.0" style="-fx-background-color: rgba(46, 45, 51, 1); -fx-spacing: 20px; -fx-padding: 5 25 5 5; -fx-border-radius: 10; -fx-background-radius: 10 10 10 0;" BorderPane.alignment="CENTER">
+         <children>
+            <Circle fx:id="MaxBotao" fill="#0fa81e" onMouseClicked="#onMax" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="MinBotao" fill="#ffd706" layoutX="1145.0" layoutY="23.0" onMouseClicked="#onMin" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#c90909" layoutX="1180.0" layoutY="24.0" onMouseClicked="#onFechar" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="CENTER" prefHeight="635.0" prefWidth="53.0" style="-fx-background-color: rgba(40,40,40,255); -fx-background-radius: 0 20 0 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 10, 2); -fx-spacing: 50;" stylesheets="@css/sera.css" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Button mnemonicParsing="false" style="-fx-background-color: 0;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" styleClass="icones">
+                     <image>
+                        <Image url="@icons/menu.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: 0;">
+               <graphic>
+                  <ImageView id="teste" fitHeight="28.0" fitWidth="21.0" styleClass="icones">
+                     <image>
+                        <Image url="@icons/notepad.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#boletim" style="-fx-background-color: 0;">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="20.0" styleClass="icones">
+                     <image>
+                        <Image url="@icons/boletim.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: 0;">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" styleClass="icones">
+                     <image>
+                        <Image url="@icons/config.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets right="60.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <Pane prefHeight="0.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

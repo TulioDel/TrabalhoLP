@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.gleidson28.GNAvatarView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
@@ -10,16 +12,17 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import org.controlsfx.control.ToggleSwitch?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgba(39, 38, 44, 1); -fx-border-radius: 60px;" stylesheets="@css/sera.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.ControladorBoletim">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgba(24,24,24,255); -fx-background-radius: 10px; -fx-effect: gaussianblur(1);" stylesheets="@css/sera.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.ControladorBoletim">
 
 <top>
-    <HBox fx:id="barra" alignment="CENTER_RIGHT" onMouseDragged="#borderpane_dragged" onMousePressed="#borderpane_pressed" prefHeight="15.0" prefWidth="1204.0" style="-fx-background-color: rgba(46, 45, 51, 1); -fx-spacing: 20px; -fx-padding: 5 25 5 5;" BorderPane.alignment="CENTER">
+    <HBox fx:id="barra" alignment="CENTER_RIGHT" onMouseDragged="#borderpane_dragged" onMousePressed="#borderpane_pressed" prefHeight="15.0" prefWidth="1204.0" style="-fx-background-color: rgba(46, 45, 51, 1); -fx-spacing: 20px; -fx-padding: 5 25 5 5; -fx-border-radius: 10; -fx-background-radius: 10 10 10 0;" BorderPane.alignment="CENTER">
         <children>
             <Circle fx:id="MaxBotao" fill="#0fa81e" onMouseClicked="#onMax" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
             <Circle fx:id="MinBotao" fill="#ffd706" layoutX="1145.0" layoutY="23.0" onMouseClicked="#onMin" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
@@ -28,45 +31,65 @@
     </HBox>
 </top>
    <left>
-      <VBox alignment="TOP_CENTER" prefHeight="635.0" prefWidth="53.0" style="-fx-background-color: rgba(46, 46, 72, 1); -fx-background-radius: 0 20 0 0; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 10, 2); -fx-spacing: 10%;" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="635.0" prefWidth="53.0" style="-fx-background-color: rgba(40,40,40,255); -fx-background-radius: 0 20 0 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 10, 2); -fx-spacing: 50;" stylesheets="@css/sera.css" BorderPane.alignment="TOP_CENTER">
          <children>
-            <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@icons/user.png" />
-               </image>
-            </ImageView>
-            <VBox alignment="CENTER" prefHeight="781.0" prefWidth="53.0" style="-fx-spacing: 40;">
+            <StackPane maxHeight="28.0" maxWidth="21.0" prefWidth="21.0" styleClass="fundoIcone" stylesheets="@css/sera.css">
                <children>
-                  <ImageView fitHeight="23.0" fitWidth="23.0">
-                     <image>
-                        <Image url="@icons/config.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="28.0" fitWidth="20.0">
-                     <image>
-                        <Image url="@icons/boletim.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="30.0" fitWidth="30.0">
-                     <image>
-                        <Image url="@icons/menu.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="28.0" fitWidth="21.0">
+                  <ImageView id="teste" fitHeight="28.0" fitWidth="21.0" styleClass="icones">
                      <image>
                         <Image url="@icons/notepad.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </children>
-            </VBox>
-         </children></VBox>
+            </StackPane>
+            <StackPane maxHeight="30.0" maxWidth="30.0" styleClass="fundoIcone" stylesheets="@css/sera.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" styleClass="icones">
+                     <image>
+                        <Image url="@icons/menu.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="28.0" maxWidth="20.0" styleClass="fundoIcone" stylesheets="@css/sera.css">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="20.0" styleClass="icones">
+                     <image>
+                        <Image url="@icons/boletim.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="23.0" maxWidth="23.0" styleClass="fundoIcone" stylesheets="@css/sera.css">
+               <children>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" styleClass="icones">
+                     <image>
+                        <Image url="@icons/config.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
    </left>
    <center>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <center>
             <TableView id="tabela" fx:id="tabelaNotas" prefHeight="303.0" prefWidth="1029.0" stylesheets="@css/sera.css" BorderPane.alignment="CENTER">
               <columns>
-                  <TableColumn id="colunaP" fx:id="um" editable="false" sortable="false" text="1" />
+                  <TableColumn id="colunaP" fx:id="um" editable="false" sortable="false" />
                 <TableColumn id="coluna" fx:id="materias" sortable="false" text="Matéria" />
                 <TableColumn id="coluna" fx:id="primeiro" sortable="false" text="1º Bimestre" />
                   <TableColumn id="coluna" fx:id="segundo" sortable="false" text="2º  Bimestre" />
@@ -91,14 +114,27 @@
                         <Font name="Lucida Sans Unicode" size="50.0" />
                      </font>
                      <BorderPane.margin>
-                        <Insets bottom="20.0" top="20.0" />
+                        <Insets bottom="10.0" left="50.0" top="10.0" />
                      </BorderPane.margin>
                   </Text>
                </center>
+               <right>
+                  <GNAvatarView maxHeight="55.0" maxWidth="55.0" prefHeight="50.0" prefWidth="50.0" stroke="#ad0c15" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@perfil/1.png" />
+                     </image>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </GNAvatarView>
+               </right>
+               <BorderPane.margin>
+                  <Insets left="60.0" right="60.0" />
+               </BorderPane.margin>
             </BorderPane>
          </top>
          <bottom>
-            <GridPane prefHeight="95.0" prefWidth="1016.0" style="-fx-background-color: rgba(30, 30, 30, 1); -fx-border-color: black; -fx-border-width: 2;" stylesheets="@css/sera.css" BorderPane.alignment="CENTER">
+            <GridPane prefHeight="95.0" prefWidth="1016.0" style="-fx-background-color: rgba(30, 30, 30, 1); -fx-border-color: rgba(175,12,21,255); -fx-border-width: 2;" stylesheets="@css/sera.css" BorderPane.alignment="CENTER">
               <columnConstraints>
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -124,7 +160,10 @@
                               <Font name="Arial Black" size="14.0" />
                            </font>
                         </Text>
-                        <ToggleSwitch fx:id="botaoMedia" onMouseClicked="#toggleMedia" prefHeight="20.0" prefWidth="0.0" scaleX="0.8" scaleY="0.8" styleClass="toggle" />
+                        <ToggleSwitch fx:id="botaoMedia" onMouseClicked="#toggleMedia" prefHeight="20.0" prefWidth="0.0" scaleX="0.8" scaleY="0.8" styleClass="toggle">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleSwitch>
                         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="70%">
                            <font>
                               <Font name="Arial Black" size="14.0" />
@@ -144,7 +183,10 @@
                               <Font name="Arial Black" size="14.0" />
                            </font>
                         </Text>
-                        <ToggleSwitch onMouseClicked="#toggleEstado" prefHeight="8.0" prefWidth="27.0" scaleX="0.8" scaleY="0.8" styleClass="toggle" />
+                        <ToggleSwitch onMouseClicked="#toggleEstado" prefHeight="8.0" prefWidth="27.0" scaleX="0.8" scaleY="0.8" styleClass="toggle">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleSwitch>
                         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="APR/DES">
                            <font>
                               <Font name="Arial Black" size="14.0" />
@@ -159,7 +201,10 @@
                               <Font name="Arial Black" size="14.0" />
                            </font>
                         </Text>
-                        <ToggleSwitch onMouseClicked="#toggleDivisao" prefHeight="20.0" prefWidth="10.0" scaleX="0.8" scaleY="0.8" styleClass="toggle" />
+                        <ToggleSwitch onMouseClicked="#toggleDivisao" prefHeight="20.0" prefWidth="10.0" scaleX="0.8" scaleY="0.8" styleClass="toggle">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ToggleSwitch>
                         <Text fill="WHITE" layoutX="106.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRIMESTRE">
                            <font>
                               <Font name="Arial Black" size="14.0" />
