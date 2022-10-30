@@ -15,18 +15,18 @@
 <?import javafx.scene.text.Text?>
 <?import org.controlsfx.control.ToggleSwitch?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgba(24,24,24,255);" stylesheets="@css/sera.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.ControladorBoletim">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgba(24,24,24,255);" stylesheets="@css/boletimStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.ControladorBoletim">
    <center>
-      <TableView id="tabela" fx:id="tabelaNotas" stylesheets="@css/sera.css" BorderPane.alignment="CENTER">
+      <TableView id="tabela" fx:id="tabelaNotas" stylesheets="@css/boletimStyle.css" BorderPane.alignment="CENTER">
          <columns>
             <TableColumn id="colunaP" fx:id="um" editable="false" sortable="false" />
-            <TableColumn id="coluna" fx:id="materias" sortable="false" text="Matéria" />
-            <TableColumn id="coluna" fx:id="primeiro" sortable="false" text="1º Bimestre" />
-            <TableColumn id="coluna" fx:id="segundo" sortable="false" text="2º  Bimestre" />
-            <TableColumn id="coluna" fx:id="terceiro" sortable="false" text="3º  Bimestre" />
-            <TableColumn id="coluna" fx:id="quarto" sortable="false" text="4º  Bimestre" />
-            <TableColumn id="coluna" fx:id="estado" editable="false" sortable="false" text="Estado" />
-            <TableColumn id="coluna" fx:id="estado2" editable="false" sortable="false" text="Estado" />
+            <TableColumn fx:id="materias" sortable="false" styleClass="coluna" text="Matéria" />
+            <TableColumn fx:id="primeiro" sortable="false" styleClass="coluna" text="1º Bimestre" />
+            <TableColumn fx:id="segundo" sortable="false" styleClass="coluna" text="2º  Bimestre" />
+            <TableColumn fx:id="terceiro" sortable="false" styleClass="coluna" text="3º  Bimestre" />
+            <TableColumn fx:id="quarto" sortable="false" styleClass="coluna" text="4º  Bimestre" />
+            <TableColumn fx:id="estado" editable="false" sortable="false" styleClass="coluna" text="Estado" />
+            <TableColumn fx:id="estado2" editable="false" sortable="false" styleClass="coluna" text="Estado" />
          </columns>
          <BorderPane.margin>
             <Insets />
@@ -37,14 +37,14 @@
       </TableView>
    </center>
    <top>
-      <BorderPane BorderPane.alignment="CENTER">
+      <BorderPane stylesheets="@css/boletimStyle.css" BorderPane.alignment="CENTER">
          <center>
             <Text fill="WHITE" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="2.5" text="BOLETIM" textAlignment="CENTER" wrappingWidth="212.5849609375" BorderPane.alignment="CENTER">
                <font>
                   <Font name="Lucida Sans Unicode" size="50.0" />
                </font>
                <BorderPane.margin>
-                  <Insets bottom="10.0" left="50.0" top="10.0" />
+                  <Insets bottom="10.0" left="55.0" top="10.0" />
                </BorderPane.margin>
             </Text>
          </center>
@@ -64,7 +64,7 @@
       </BorderPane>
    </top>
    <bottom>
-      <GridPane prefHeight="95.0" prefWidth="1016.0" style="-fx-background-color: rgba(30, 30, 30, 1); -fx-border-color: rgba(175,12,21,255); -fx-border-width: 2; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 10, 10);" stylesheets="@css/sera.css" BorderPane.alignment="CENTER">
+      <GridPane id="opcoesGrid" prefHeight="95.0" prefWidth="1016.0" stylesheets="@css/boletimStyle.css" BorderPane.alignment="CENTER">
          <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

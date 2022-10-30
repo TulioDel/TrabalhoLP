@@ -11,10 +11,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 
-<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgba(24,24,24,255); -fx-background-radius: 10px; -fx-effect: gaussianblur(1);" stylesheets="@css/sera.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.GeneralController">
+<BorderPane id="base" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@css/MenuStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.GeneralController">
 
    <top>
-      <HBox fx:id="barra" alignment="CENTER_RIGHT" onMouseDragged="#borderpane_dragged" onMousePressed="#borderpane_pressed" prefHeight="15.0" prefWidth="1204.0" style="-fx-background-color: rgba(46, 45, 51, 1); -fx-spacing: 20px; -fx-padding: 5 25 5 5; -fx-border-radius: 10; -fx-background-radius: 10 10 10 0;" BorderPane.alignment="CENTER">
+      <HBox id="cima" fx:id="barra" alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseDragged="#borderpane_dragged" onMousePressed="#borderpane_pressed" prefHeight="15.0" prefWidth="1204.0" stylesheets="@css/MenuStyle.css" BorderPane.alignment="CENTER">
          <children>
             <Circle fx:id="MaxBotao" fill="#0fa81e" onMouseClicked="#onMax" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
             <Circle fx:id="MinBotao" fill="#ffd706" layoutX="1145.0" layoutY="23.0" onMouseClicked="#onMin" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
@@ -23,7 +23,7 @@
       </HBox>
    </top>
    <left>
-      <VBox alignment="CENTER" prefHeight="635.0" prefWidth="53.0" style="-fx-background-color: rgba(40,40,40,255); -fx-background-radius: 0 20 0 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 10, 2); -fx-spacing: 50;" stylesheets="@css/sera.css" BorderPane.alignment="TOP_CENTER">
+      <VBox id="menuIcones" alignment="CENTER" prefHeight="635.0" prefWidth="53.0" stylesheets="@css/MenuStyle.css" BorderPane.alignment="TOP_CENTER">
          <children>
             <Button mnemonicParsing="false" style="-fx-background-color: 0;">
                <graphic>
@@ -40,7 +40,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: 0;">
+            <Button mnemonicParsing="false" onAction="#notepad" style="-fx-background-color: 0;">
                <graphic>
                   <ImageView id="teste" fitHeight="28.0" fitWidth="21.0" styleClass="icones">
                      <image>
@@ -92,9 +92,9 @@
       </VBox>
    </left>
    <center>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
    <right>
-      <Pane prefHeight="0.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+      <Pane fx:id="direita" prefHeight="0.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
    </right>
 </BorderPane>

@@ -1,0 +1,100 @@
+
+/*TABELA GERAL*/
+#tabela {
+    -fx-background-color: rgba(44, 44, 44, 1);
+    -fx-border-width: 4 0 0 0;
+    -fx-border-color: rgba(175,12,21,255);
+    -fx-border-radius: 5px;
+    -fx-background-radius: 10px;
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 10, 10);
+}
+
+
+#tabela .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: rgba(56, 56, 56, 1);
+    -fx-border-color: linear-gradient(to top, #4B4B4B, #383838);
+}
+
+
+#tabela .column-header .label{
+    -fx-text-fill: white;
+    -fx-padding: 20 15 15 15;
+}
+
+
+/*COLUNAS*/
+.coluna {
+    -fx-background-color: rgba(44, 44, 44, 1);
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+    -fx-border-color: rgba(75, 75, 75, 1);
+    -fx-border: 1px;
+}
+
+
+/*BOTÕES SWITCHTOGGLE*/
+.toggle .thumb-area {
+    -fx-background-color: rgba(39, 39, 41, 1);
+}
+
+
+.toggle:selected .thumb-area {
+    -fx-background-color: rgba(173, 64, 70, 1);
+}
+
+
+.toggle .thumb {
+    -fx-background-color: rgba(255, 255, 255, 1);
+}
+
+
+.toggle:selected .thumb {
+    -fx-background-color:  rgba(175,12,21,255);
+}
+
+
+/*PRIMEIRA COLUNA */
+#colunaP {
+    -fx-background-color: rgba(56, 56, 56, 1);
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+    -fx-border-color: rgba(75, 75, 75, 1);
+    -fx-border: 1px;
+    -fx-font-weight: bold
+}
+
+
+/*SCROLL DA TABELA */
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb{
+    -fx-background-color: rgba(56, 56, 56, 1);
+    -fx-border-color: transparent;
+    -fx-background-radius: 5em;
+}
+
+
+.scroll-bar:horizontal, .scroll-bar:vertical {
+    -fx-background-color: rgba(75, 75, 75, 1);
+}
+
+
+/*CONFIGURAÇÕES DE BAIXO */
+#opcoesGrid {
+    -fx-background-color:  rgba(30, 30, 30, 1);
+    -fx-border-color: rgba(175,12,21,255);
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 10, 10);
+}
+
+
+/*INPUTS DE INFO*/
+.text-field-table-cell .text-field {
+   -fx-border-color: rgba(175,12,21,255);
+   -fx-background-color: rgba(30, 30, 30, 1);
+   -fx-alignment: CENTER;
+   -fx-padding: 10;
+   -fx-text-fill: white;
+   -fx-font-weight: bold;
+}

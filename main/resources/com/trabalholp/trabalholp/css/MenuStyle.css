@@ -1,0 +1,24 @@
+/*VBOX DOS ICONES*/
+#menuIcones {
+    -fx-background-color: rgba(40,40,40,255);
+    -fx-background-radius: 0 20 0 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 10, 2);
+    -fx-spacing: 50;
+}
+
+
+/*BARRA CLOSE/MIN/MAX*/
+#cima {
+    -fx-background-color: rgba(46, 45, 51, 1);
+    -fx-spacing: 20px;
+    -fx-padding: 5 25 5 5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10 10 10 0;
+}
+
+
+/*FUNDO*/
+#base {
+    -fx-background-color: rgba(24,24,24,255);
+    -fx-background-radius: 10px;
+}

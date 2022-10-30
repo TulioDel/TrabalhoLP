@@ -16,7 +16,7 @@ public class PageLoader {
 
     public BorderPane getPane(String endereco) {
         try {
-            URL enderecoLiteral = Aplicativo.class.getResource("/com/trabalholp/trabalholp/BoletimPane.fxml");
+            URL enderecoLiteral = Aplicativo.class.getResource("/com/trabalholp/trabalholp/" + endereco + ".fxml");
 
             if (enderecoLiteral == null) {
                 throw new java.io.FileNotFoundException("Arquivo não encontrado");

@@ -1,6 +1,5 @@
 package com.trabalholp.trabalholp;
 
-import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
@@ -10,14 +9,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
-import javafx.scene.shape.Circle;
-import javafx.stage.Stage;
 import javafx.util.converter.DoubleStringConverter;
-import javafx.util.converter.IntegerStringConverter;
-
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -53,64 +45,6 @@ public class ControladorBoletim implements Initializable {
     private TableColumn<linha, Integer> um;
 
 
-
-
-
-
-    @FXML
-    private Circle MinBotao;
-
-    @FXML
-    private Circle MaxBotao;
-
-    @FXML
-    private HBox barra;
-
-
-
-
-
-    @FXML
-    protected void onFechar() {
-        javafx.application.Platform.exit();
-    }
-
-
-
-
-    @FXML
-    private void onMin() {
-        Stage stage = (Stage) MinBotao.getScene().getWindow();
-        stage.setIconified(true);
-    }
-
-
-
-
-    @FXML
-    private void onMax() {
-        Stage stage = (Stage) MaxBotao.getScene().getWindow();
-        stage.setMaximized(!stage.isMaximized());
-    }
-
-
-
-
-
-    private double x = 0, y = 0;
-
-    @FXML
-    private void borderpane_dragged(MouseEvent event) {
-        Stage stage = (Stage) barra.getScene().getWindow();
-        stage.setY(event.getScreenY() - y);
-        stage.setX(event.getScreenX() - x);
-    }
-
-    @FXML
-    private void borderpane_pressed(MouseEvent event) {
-        x = event.getSceneX();
-        y = event.getSceneY();
-    }
 
     int media = 60;
     @FXML
@@ -159,7 +93,6 @@ public class ControladorBoletim implements Initializable {
                 linhas.get(i).atualizarEstado(media);
                 tabelaNotas.refresh();
             }
-
         }
 
         else {
@@ -182,7 +115,6 @@ public class ControladorBoletim implements Initializable {
         for (int i = 0; i < 15;i++) {
             linhas.add(new linha(1, 2, 3,4,"materia" + Integer.toString(i+1),i+1, media));
         }
-
     }
 
     public void Lista() {
@@ -256,7 +188,7 @@ public class ControladorBoletim implements Initializable {
         estado.setCellValueFactory(new PropertyValueFactory<linha, Double>("estado"));
         estado2.setCellValueFactory(new PropertyValueFactory<linha, String>("estado2"));
 
-
+        um.setReorderable(false);
         materias.setReorderable(false);
         primeiro.setReorderable(false);
         segundo.setReorderable(false);
@@ -265,16 +197,7 @@ public class ControladorBoletim implements Initializable {
         estado.setReorderable(false);
         estado2.setReorderable(false);
 
-
-
         estado2.setVisible(false);
-
-
-
-
-
-
-
 
         um.setMinWidth(50);
         um.setMaxWidth(50);

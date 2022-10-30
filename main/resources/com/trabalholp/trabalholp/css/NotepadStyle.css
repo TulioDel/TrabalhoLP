@@ -1,0 +1,90 @@
+/*TABELA GERAL*/
+#notas {
+    -fx-background-color:  rgba(24,24,24,255);
+}
+
+#notepad {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 13, 0, 10, 10);
+}
+
+#leftBorder {
+    -fx-background-color:  rgba(24,24,24,255);
+}
+
+#fundoNote {
+     -fx-background-color: rgba(40,40,40,255);
+     -fx-padding: 30 140 30 170;
+
+}
+
+#AreaText{
+    -fx-background-color: rgba(50,50,50,255);
+    -fx-text-fill: white;
+    -fx-highlight-fill: rgba(40,40,40,255);
+    -fx-control-inner-background: black;
+    -fx-padding: 0 35 0 35px;
+
+}
+
+#AreaText .content {
+    -fx-background-color: rgba(50,50,50,255);
+    -fx-background-radius: 10 10 10 10;
+
+}
+
+#AreaText:focused .content {
+    -fx-background-color: rgba(50,50,50,255);
+    -fx-text-fill: white;
+
+}
+
+
+#pesquisa {
+    -fx-background-color: rgba(50,50,50,255);
+    -fx-background-radius: 10 10 10 10;
+}
+
+#pesquisa:focused {
+    -fx-text-fill: white;
+}
+
+
+/*RETIRAR BORDAS BRANCAS*/
+#AreaText .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.color-picker {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5;
+    -fx-padding: 0;
+
+}
+
+.color-picker .color-picker-label .text {
+    visibility: false;
+}
+
+.color-picker .color-picker-label{
+    -fx-spacing: 0;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+
+
+#titulo {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+#titulo:focused {
+    -fx-text-fill: white;
+}
+
+#tituloHBox {
+    -fx-background-color: rgba(50,50,50,255);
+    -fx-padding: 0 35 0 35px;
+    -fx-margin: 0;
+}
