@@ -23,6 +23,7 @@
     -fx-highlight-fill: rgba(40,40,40,255);
     -fx-control-inner-background: black;
     -fx-padding: 0 35 0 35px;
+    -fx-prompt-text-fill: WHITE;
 
 }
 
@@ -87,4 +88,36 @@
     -fx-background-color: rgba(50,50,50,255);
     -fx-padding: 0 35 0 35px;
     -fx-margin: 0;
+}
+
+.UmaNota {
+    -fx-spacing: 50px;
+}
+
+.TextoNotaLado {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+
+}
+
+
+.TextAreaDoVbox, .TextAreaDoVbox: focused, .TextAreaDoVbox . content{
+    -fx-background-color: #181818;
+    -fx-padding: 0;
+    -fx-text-fill: white;
+}
+
+
+.TextAreaDoVbox .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.color-picker .arrow-button, .color-picker .arrow-button .arrow {
+    -fx-background-color: transparent;
+}
+
+#blocoNotas {
+    -fx-spacing: 20px;
 }
