@@ -73,6 +73,11 @@
     -fx-border-width: 0;
 }
 
+.selecionado {
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+}
+
 
 
 #titulo {
@@ -116,7 +121,15 @@
 
 .color-picker .arrow-button, .color-picker .arrow-button .arrow {
     -fx-background-color: transparent;
+    -fx-background-insets: 0 0 0 0, 0;
+    -fx-shape: null;
+    -fx-background-radius: 0;
 }
+
+
+
+
+
 
 #blocoNotas {
     -fx-spacing: 20px;

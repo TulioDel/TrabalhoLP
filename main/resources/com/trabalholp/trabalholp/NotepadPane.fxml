@@ -47,7 +47,7 @@
             </HBox>
          </bottom>
          <center>
-            <VBox fx:id="blocoNotas" prefHeight="200.0" prefWidth="100.0" spacing="10.0" stylesheets="@css/NotepadStyle.css" BorderPane.alignment="CENTER">
+            <VBox id="blocoNotas" fx:id="blocoNotas" prefHeight="200.0" prefWidth="100.0" spacing="10.0" stylesheets="@css/NotepadStyle.css" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets top="40.0" />
                </BorderPane.margin>
@@ -56,9 +56,9 @@
       </BorderPane>
    </left>
    <center>
-      <BorderPane id="fundoNote" fx:id="foca" onMouseClicked="#focarPane" prefHeight="672.0" prefWidth="744.0" stylesheets="@css/NotepadStyle.css" BorderPane.alignment="CENTER">
+      <BorderPane id="fundoNote" fx:id="focaai" onMouseClicked="#focarPane" prefHeight="672.0" prefWidth="744.0" stylesheets="@css/NotepadStyle.css" BorderPane.alignment="CENTER">
          <center>
-            <BorderPane id="notepad" maxHeight="1030.0" maxWidth="700.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/NotepadStyle.css" BorderPane.alignment="CENTER">
+            <BorderPane id="notepad" fx:id="foca" maxHeight="1030.0" maxWidth="700.0" onMouseClicked="#focarPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/NotepadStyle.css" BorderPane.alignment="CENTER">
                <center>
                   <TextArea id="AreaText" fx:id="Texto" maxHeight="1030.0" maxWidth="717.0" onInputMethodTextChanged="#mudando" prefHeight="534.0" prefWidth="424.0" promptText="Escreva algo :)" stylesheets="@css/NotepadStyle.css" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
@@ -69,7 +69,7 @@
                <top>
                   <HBox id="tituloHBox" alignment="CENTER" prefHeight="114.0" prefWidth="426.0" stylesheets="@css/NotepadStyle.css" BorderPane.alignment="CENTER">
                      <children>
-                        <ColorPicker fx:id="cor" onAction="#mudando" scaleX="2.0" scaleY="2.0">
+                        <ColorPicker fx:id="cor" editable="true" onAction="#mudando" prefHeight="17.0" prefWidth="20.0" scaleX="2.0" scaleY="2.0" stylesheets="@css/NotepadStyle.css">
                            <HBox.margin>
                               <Insets left="25.0" />
                            </HBox.margin>

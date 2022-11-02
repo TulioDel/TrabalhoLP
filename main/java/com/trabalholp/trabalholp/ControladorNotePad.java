@@ -14,10 +14,7 @@ import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.Glow;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
@@ -41,7 +38,7 @@ public class ControladorNotePad implements Initializable {
     TextField Titulo;
 
     @FXML
-    Pane foca;
+    BorderPane focaai;
 
 
     int selecionado = 0;
@@ -53,9 +50,6 @@ public class ControladorNotePad implements Initializable {
         notas.get(selecionado).setTexto(Texto.getText());
         notas.get(selecionado).setTitulo(Titulo.getText());
         definir(selecionado);
-
-
-
     }
 
     public void definir(int index) {
@@ -109,9 +103,18 @@ public class ControladorNotePad implements Initializable {
 
 
         });
+        bordinhadeCria();
 
     }
 
+    public void bordinhadeCria() {
+
+        for (int i = 0; blocoNotas.getChildren().size() > i; i++) {
+            blocoNotas.getChildren().get(i).getStyleClass().remove("selecionado");
+        }
+
+        blocoNotas.getChildren().get(selecionado).getStyleClass().add("selecionado");
+    }
 
     @FXML
     private void criarNota() {
@@ -149,6 +152,8 @@ public class ControladorNotePad implements Initializable {
 
 
 
+
+
         notaLista.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -157,7 +162,7 @@ public class ControladorNotePad implements Initializable {
                 System.out.println(index);
 
                 definir(index);
-
+                bordinhadeCria();
 
             }
 
@@ -165,24 +170,30 @@ public class ControladorNotePad implements Initializable {
         });
 
         blocoNotas.getChildren().add( notaLista);
+        selecionado = notas.size()-1;
+        bordinhadeCria();
+
 
 
     }
 
-    public void foca() {
-        foca.requestFocus();
-    }
+
 
     @FXML
     private void focarPane() {
+        Texto.commitValue();
+        focaai.requestFocus();
+        mudando();
+
     }
+
 
     ArrayList<Nota> notas = new ArrayList<>();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         criarNota();
-        definir(selecionado);
+        criarNota();
 
 
 
