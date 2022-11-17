@@ -17,7 +17,7 @@ public class Aplicativo extends Application {
 
 
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Aplicativo.class.getResource("MenuPane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Aplicativo.class.getResource("MainPane.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 1200, 700);
 
@@ -26,7 +26,7 @@ public class Aplicativo extends Application {
         stage.initStyle(StageStyle.TRANSPARENT);
         scene.setFill(Color.TRANSPARENT);
 
-        stage.setTitle("Login");
+        stage.setTitle("");
         stage.setScene(scene);
         stage.show();
 

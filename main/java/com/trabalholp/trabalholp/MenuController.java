@@ -3,6 +3,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.PasswordField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -15,55 +16,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class GeneralController implements Initializable {
-    @FXML
-    private Circle MinBotao;
+public class MenuController implements Initializable {
 
-    @FXML
-    private Circle MaxBotao;
-
-    @FXML
-    private HBox barra;
 
     @FXML
     private BorderPane mainPane;
 
-    @FXML
-    protected void onFechar() {
-        javafx.application.Platform.exit();
-    }
 
-    @FXML
-    private void onMin() {
-        Stage stage = (Stage) MinBotao.getScene().getWindow();
-        stage.setIconified(true);
-    }
-
-    @FXML
-    private void onMax() {
-        Stage stage = (Stage) MaxBotao.getScene().getWindow();
-        if (stage.isMaximized()) {
-            stage.setMaximized(false);
-        } else {
-            stage.setMaximized(true);
-        }
-    }
-
-
-    private double x = 0, y = 0;
-
-    @FXML
-    private void borderpane_dragged(MouseEvent event) {
-        Stage stage = (Stage) barra.getScene().getWindow();
-        stage.setY(event.getScreenY() - y);
-        stage.setX(event.getScreenX() - x);
-    }
-
-    @FXML
-    private void borderpane_pressed(MouseEvent event) {
-        x = event.getSceneX();
-        y = event.getSceneY();
-    }
 
     void zerarClick() {
         boletimClick = false;
@@ -75,6 +34,15 @@ public class GeneralController implements Initializable {
     boolean configClick = false;
     boolean notepadClick = false;
     boolean menuClick = false;
+
+    String nome;
+    String senha;
+
+    void informacoes(String nome1, String senha1) {
+        nome = nome1;
+        senha = senha1;
+        boletim();
+    }
 
     @FXML
     private void boletim() {

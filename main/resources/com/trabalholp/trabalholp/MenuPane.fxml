@@ -6,22 +6,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 
-<BorderPane id="base" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@css/MenuStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.GeneralController">
-
-   <top>
-      <HBox id="cima" fx:id="barra" alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseDragged="#borderpane_dragged" onMousePressed="#borderpane_pressed" prefHeight="15.0" prefWidth="1204.0" stylesheets="@css/MenuStyle.css" BorderPane.alignment="CENTER">
-         <children>
-            <Circle fx:id="MaxBotao" fill="#0fa81e" onMouseClicked="#onMax" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fx:id="MinBotao" fill="#ffd706" layoutX="1145.0" layoutY="23.0" onMouseClicked="#onMin" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="#c90909" layoutX="1180.0" layoutY="24.0" onMouseClicked="#onFechar" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-         </children>
-      </HBox>
-   </top>
+<BorderPane id="base" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@css/MenuStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.MenuController">
    <left>
       <VBox id="menuIcones" alignment="CENTER" prefHeight="635.0" prefWidth="53.0" stylesheets="@css/MenuStyle.css" BorderPane.alignment="TOP_CENTER">
          <children>
@@ -70,7 +58,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: 0;">
+            <Button mnemonicParsing="false" onAction="#config" style="-fx-background-color: 0;">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="23.0" styleClass="icones">
                      <image>

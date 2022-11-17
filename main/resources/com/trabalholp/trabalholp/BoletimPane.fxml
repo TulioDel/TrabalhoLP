@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import io.github.gleidson28.GNAvatarView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -15,7 +13,7 @@
 <?import javafx.scene.text.Text?>
 <?import org.controlsfx.control.ToggleSwitch?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgba(24,24,24,255);" stylesheets="@css/boletimStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.ControladorBoletim">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgba(24,24,24,255); -fx-background-radius: 0 0 20 0;" stylesheets="@css/boletimStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.ControladorBoletim">
    <center>
       <TableView id="tabela" fx:id="tabelaNotas" stylesheets="@css/boletimStyle.css" BorderPane.alignment="CENTER">
          <columns>
@@ -44,20 +42,10 @@
                   <Font name="Lucida Sans Unicode" size="50.0" />
                </font>
                <BorderPane.margin>
-                  <Insets bottom="10.0" left="55.0" top="10.0" />
+                  <Insets bottom="10.0" top="10.0" />
                </BorderPane.margin>
             </Text>
          </center>
-         <right>
-            <GNAvatarView maxHeight="55.0" maxWidth="55.0" prefHeight="55.0" prefWidth="589.0" stroke="#ad0c15" BorderPane.alignment="CENTER">
-               <image>
-                  <Image url="@perfil/1.png" />
-               </image>
-               <BorderPane.margin>
-                  <Insets />
-               </BorderPane.margin>
-            </GNAvatarView>
-         </right>
          <BorderPane.margin>
             <Insets left="60.0" right="60.0" />
          </BorderPane.margin>

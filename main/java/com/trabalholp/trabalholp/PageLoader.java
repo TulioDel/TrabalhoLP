@@ -23,12 +23,14 @@ public class PageLoader {
             }
             view = new FXMLLoader().load(enderecoLiteral);
 
+
+
         }
 
         catch (Exception e) {
             System.out.println("Sem pagina");
         }
-        view.setMaxSize(9999999, 99999);
+        view.setMaxSize(15000, 15000);
         return view;
     }
 

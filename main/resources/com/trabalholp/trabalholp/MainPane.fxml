@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgba(22,22,22,255); -fx-border-radius: 20; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalholp.trabalholp.MainPaneController">
+
+<top>
+    <HBox fx:id="barra" alignment="CENTER_RIGHT" onMouseDragged="#borderpane_dragged" onMousePressed="#borderpane_pressed" prefHeight="15.0" prefWidth="1204.0" style="-fx-background-color: rgba(46, 45, 51, 1); -fx-spacing: 20px; -fx-padding: 5 25 5 5; -fx-border-radius: 0 20 20 0; -fx-background-radius: 10 10 0 0;" BorderPane.alignment="CENTER">
+        <children>
+            <Circle fx:id="MaxBotao" fill="#0fa81e" onMouseClicked="#onMax" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="MinBotao" fill="#ffd706" layoutX="1145.0" layoutY="23.0" onMouseClicked="#onMin" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#c90909" layoutX="1180.0" layoutY="24.0" onMouseClicked="#onFechar" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        </children>
+    </HBox>
+</top>
+   <center>
+      <BorderPane prefHeight="567.0" prefWidth="1204.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
