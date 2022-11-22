@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -26,9 +29,6 @@
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
-         <padding>
-            <Insets right="60.0" />
-         </padding>
          <bottom>
             <HBox alignment="CENTER" prefHeight="48.0" prefWidth="250.0" BorderPane.alignment="CENTER">
                <children>
@@ -39,6 +39,9 @@
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
                <BorderPane.margin>
@@ -60,7 +63,7 @@
          <center>
             <BorderPane id="notepad" fx:id="foca" maxHeight="1030.0" maxWidth="700.0" onMouseClicked="#focarPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/NotepadStyle.css" BorderPane.alignment="CENTER">
                <center>
-                  <TextArea id="AreaText" fx:id="Texto" maxHeight="1030.0" maxWidth="717.0" onInputMethodTextChanged="#mudando" prefHeight="534.0" prefWidth="424.0" promptText="Escreva algo :)" stylesheets="@css/NotepadStyle.css" wrapText="true" BorderPane.alignment="CENTER">
+                  <TextArea id="AreaText" fx:id="Texto" maxHeight="1030.0" maxWidth="717.0" onInputMethodTextChanged="#mudando" prefHeight="498.0" prefWidth="308.0" promptText="Escreva algo :)" stylesheets="@css/NotepadStyle.css" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -69,7 +72,7 @@
                <top>
                   <HBox id="tituloHBox" alignment="CENTER" prefHeight="114.0" prefWidth="426.0" stylesheets="@css/NotepadStyle.css" BorderPane.alignment="CENTER">
                      <children>
-                        <ColorPicker fx:id="cor" editable="true" onAction="#mudando" prefHeight="17.0" prefWidth="20.0" scaleX="2.0" scaleY="2.0" stylesheets="@css/NotepadStyle.css">
+                        <ColorPicker fx:id="cor" editable="true" onAction="#mudando" prefHeight="17.0" prefWidth="8.0" scaleX="2.0" scaleY="2.0" stylesheets="@css/NotepadStyle.css">
                            <HBox.margin>
                               <Insets left="25.0" />
                            </HBox.margin>
@@ -86,6 +89,28 @@
                   </HBox>
                </top></BorderPane>
          </center>
+         <left>
+            <HBox BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#deleta" style="-fx-background-color: 0;">
+                     <graphic>
+                        <ImageView fitHeight="82.0" fitWidth="82.0">
+                           <image>
+                              <Image url="@icons/apagar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="-133.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="-120.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: 0;" />
+               </children>
+            </HBox>
+         </left>
       </BorderPane>
    </center>
 </BorderPane>

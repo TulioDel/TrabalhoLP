@@ -4,6 +4,8 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -37,14 +39,23 @@
    <top>
       <BorderPane stylesheets="@css/boletimStyle.css" BorderPane.alignment="CENTER">
          <center>
-            <Text fill="WHITE" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="2.5" text="BOLETIM" textAlignment="CENTER" wrappingWidth="212.5849609375" BorderPane.alignment="CENTER">
-               <font>
-                  <Font name="Lucida Sans Unicode" size="50.0" />
-               </font>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="10.0" top="10.0" />
                </BorderPane.margin>
-            </Text>
+               <children>
+                  <Text fill="WHITE" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="2.5" text="BOLETIM" textAlignment="CENTER" wrappingWidth="212.5849609375">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="50.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="76.0" fitWidth="112.0">
+                     <image>
+                        <Image url="@icons/capotado.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
          </center>
          <BorderPane.margin>
             <Insets left="60.0" right="60.0" />

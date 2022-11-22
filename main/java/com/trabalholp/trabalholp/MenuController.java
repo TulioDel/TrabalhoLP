@@ -86,7 +86,7 @@ public class MenuController implements Initializable {
     private void menu() {
         if (!menuClick) {
             PageLoader vai = new PageLoader();
-            BorderPane sera = vai.getPane("MenuPane");
+            BorderPane sera = vai.getPane("MenuMenuPane");
             mainPane.getRight().setStyle("-fx-background-color: rgba(24,24,24,255);");
             mainPane.setCenter(sera);
             zerarClick();
@@ -98,7 +98,7 @@ public class MenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        menu();
     }
 }
 

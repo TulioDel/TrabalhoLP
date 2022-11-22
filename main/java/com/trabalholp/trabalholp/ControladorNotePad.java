@@ -1,8 +1,6 @@
 package com.trabalholp.trabalholp;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.Event;
+import com.google.gson.Gson;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,17 +8,16 @@ import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.effect.Glow;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.*;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-import javax.net.ssl.SNIHostName;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 
@@ -116,12 +113,25 @@ public class ControladorNotePad implements Initializable {
         blocoNotas.getChildren().get(selecionado).getStyleClass().add("selecionado");
     }
 
+
     @FXML
     private void criarNota() {
+        criarNota1("","",Color.WHITE);
+        LerEscrever.gravarArquivoNotas(logado, notas);
+    }
+
+   void criarNota1(String texto, String titulo, Color cores) {
 
 
+        Nota nota;
 
-        Nota nota = new Nota("", "Sem título", Color.WHITE);
+        if (!Objects.equals(texto, "")){
+
+            nota = new Nota(texto, titulo, cores);
+        }
+        else {
+            nota = new Nota("", "Sem título", Color.WHITE);
+        }
         notas.add(nota);
 
         cor.setValue(nota.cor);
@@ -187,18 +197,47 @@ public class ControladorNotePad implements Initializable {
 
     }
 
+    @FXML
+    private void deleta(){
+        if (notas.size() > 1) {
+            blocoNotas.getChildren().remove(selecionado);
+            notas.remove(selecionado);
+            selecionado = 0;
+            definir(0);
+            bordinhadeCria();
+        }
+        else {
 
-    ArrayList<Nota> notas = new ArrayList<>();
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        criarNota();
-        criarNota();
-
-
+        }
 
     }
 
+
+
+    ArrayList<Nota> notas = new ArrayList<>();
+    usuario logado;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        logado = LerEscrever.lerArquivo();
+
+        ArrayList<Nota> notas1 = LerEscrever.lerArquivoNotas(logado);
+        for (int i = 0; i < notas1.size();i++)
+            System.out.printf(notas1.get(i).getTitulo());
+
+        if (notas1.size() != 0) {
+
+            for (int i = 0; i < notas1.size(); i++) {
+
+                criarNota1(notas1.get(i).texto, notas1.get(i).titulo, notas1.get(i).getCor());
+            }
+
+       }
+        else {
+            criarNota();
+        }
+
+    }
 }
 
 

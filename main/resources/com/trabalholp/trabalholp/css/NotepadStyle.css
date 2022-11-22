@@ -74,8 +74,8 @@
 }
 
 .selecionado {
-    -fx-border-width: 1px;
-    -fx-border-color: black;
+    -fx-border-width:  1 0 1 0;
+    -fx-border-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 40% , #af0c15, transparent);
 }
 
 
@@ -97,6 +97,7 @@
 
 .UmaNota {
     -fx-spacing: 50px;
+    -fx-padding: 5px;
 }
 
 .TextoNotaLado {

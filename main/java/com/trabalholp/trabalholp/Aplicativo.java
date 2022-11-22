@@ -3,6 +3,7 @@ package com.trabalholp.trabalholp;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -26,8 +27,9 @@ public class Aplicativo extends Application {
         stage.initStyle(StageStyle.TRANSPARENT);
         scene.setFill(Color.TRANSPARENT);
 
-        stage.setTitle("");
+        stage.setTitle("SUS");
         stage.setScene(scene);
+        stage.getIcons().add(new Image("https://i.imgur.com/7k1IV8K.jpg"));
         stage.show();
 
     }

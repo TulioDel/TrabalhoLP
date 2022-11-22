@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -17,51 +19,60 @@
             <Insets />
          </BorderPane.margin>
          <children>
-          <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="404.0" style="-fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: rgba(24,24,24,255); -fx-background-radius: 10; -fx-border-color: rgba(175,12,21,255); -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 10, 10);">
-              <children>
-                  <TextField fx:id="email" maxWidth="434.0" prefHeight="50.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: 0; -fx-border-color: white; -fx-border-width: 0 0 1 0;">
-                      <font>
-                          <Font name="Calibri" size="20.0" />
-                      </font>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </TextField>
-                  <PasswordField fx:id="senha" layoutX="512.0" layoutY="332.0" maxHeight="-Infinity" maxWidth="429.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="306.0" promptText="Senha" style="-fx-background-color: 0; -fx-border-width: 0 0 1 0; -fx-border-color: white;" styleClass="-fx-border-width">
-                      <font>
-                          <Font name="Calibri" size="20.0" />
-                      </font>
-                     <VBox.margin>
-                        <Insets top="30.0" />
-                     </VBox.margin>
-                  </PasswordField>
-                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#logar" prefHeight="44.0" prefWidth="304.0" style="-fx-background-color: rgba(175,12,21,255); -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 10, 10);" text="Logar" textFill="WHITE">
-                      <VBox.margin>
-                          <Insets top="50.0" />
-                      </VBox.margin>
-                      <font>
-                          <Font name="Calibri" size="18.0" />
-                      </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button id="registrar" contentDisplay="CENTER" layoutX="62.0" layoutY="238.0" mnemonicParsing="false" onAction="#registrarPage" prefHeight="26.0" prefWidth="141.0" style="-fx-background-color: rgba(30,30,30,255); -fx-border-color: rgba(35,35,35,255);" text="Registrar" textFill="WHITE">
-                     <font>
-                        <Font name="Consolas" size="14.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <VBox.margin>
-                        <Insets top="30.0" />
-                     </VBox.margin>
-                  </Button>
-              </children>
-               <padding>
-                  <Insets left="50.0" right="50.0" />
-               </padding>
-          </VBox>
+            <VBox alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="199.0">
+                     <image>
+                        <Image url="@icons/sus.png" />
+                     </image>
+                  </ImageView>
+                <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="404.0" style="-fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: rgba(24,24,24,255); -fx-background-radius: 10; -fx-border-color: rgba(175,12,21,255); -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 10, 10);">
+                    <children>
+                        <TextField fx:id="email" maxWidth="434.0" prefHeight="50.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: 0; -fx-border-color: white; -fx-border-width: 0 0 1 0;">
+                            <font>
+                                <Font name="Calibri" size="20.0" />
+                            </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextField>
+                        <PasswordField fx:id="senha" layoutX="512.0" layoutY="332.0" maxHeight="-Infinity" maxWidth="429.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="306.0" promptText="Senha" style="-fx-background-color: 0; -fx-border-width: 0 0 1 0; -fx-border-color: white;" styleClass="-fx-border-width">
+                            <font>
+                                <Font name="Calibri" size="20.0" />
+                            </font>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#logar" prefHeight="44.0" prefWidth="304.0" style="-fx-background-color: rgba(175,12,21,255); -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 10, 10);" text="Logar" textFill="WHITE">
+                            <VBox.margin>
+                                <Insets top="50.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Calibri" size="18.0" />
+                            </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="registrar" contentDisplay="CENTER" layoutX="62.0" layoutY="238.0" mnemonicParsing="false" onAction="#registrarPage" prefHeight="26.0" prefWidth="141.0" style="-fx-background-color: rgba(30,30,30,255); -fx-border-color: rgba(35,35,35,255);" text="Registrar" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                    </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                </VBox>
+               </children>
+            </VBox>
          </children>
       </HBox>
 </center>

@@ -13,7 +13,7 @@
    <left>
       <VBox id="menuIcones" alignment="CENTER" prefHeight="635.0" prefWidth="53.0" stylesheets="@css/MenuStyle.css" BorderPane.alignment="TOP_CENTER">
          <children>
-            <Button mnemonicParsing="false" style="-fx-background-color: 0;">
+            <Button mnemonicParsing="false" onAction="#menu" style="-fx-background-color: 0;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" styleClass="icones">
                      <image>
