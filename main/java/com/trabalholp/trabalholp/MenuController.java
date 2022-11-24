@@ -35,14 +35,7 @@ public class MenuController implements Initializable {
     boolean notepadClick = false;
     boolean menuClick = false;
 
-    String nome;
-    String senha;
 
-    void informacoes(String nome1, String senha1) {
-        nome = nome1;
-        senha = senha1;
-        boletim();
-    }
 
     @FXML
     private void boletim() {
@@ -76,7 +69,7 @@ public class MenuController implements Initializable {
             PageLoader vai = new PageLoader();
             BorderPane sera = vai.getPane("ConfigPane");
             mainPane.setCenter(sera);
-            mainPane.getRight().setStyle("-fx-background-color: rgba(24,24,24,255);");
+            //mainPane.getRight().setStyle("-fx-background-color: rgba(24,24,24,255);");
             zerarClick();
             configClick = true;
         }

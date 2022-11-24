@@ -1,6 +1,5 @@
 package com.trabalholp.trabalholp;
 
-import com.google.gson.Gson;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
